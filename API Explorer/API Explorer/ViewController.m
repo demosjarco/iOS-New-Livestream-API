@@ -8,6 +8,8 @@
 
 #import "ViewController.h"
 
+#import "NL_API.h"
+
 @interface ViewController ()
 
 @end
@@ -17,11 +19,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
-}
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    [[NL_Account alloc] initWithAccountId:1234123];
 }
 
 @end

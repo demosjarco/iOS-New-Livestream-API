@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		177508291AB1747F00FE0F80 /* NL_Event.m in Sources */ = {isa = PBXBuildFile; fileRef = 177508281AB1747F00FE0F80 /* NL_Event.m */; };
+		1775082D1AB1772800FE0F80 /* NL_Account.m in Sources */ = {isa = PBXBuildFile; fileRef = 1775082C1AB1772800FE0F80 /* NL_Account.m */; };
 		17A8BDEB1AB1203300D5F30E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 17A8BDEA1AB1203300D5F30E /* main.m */; };
 		17A8BDEE1AB1203300D5F30E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 17A8BDED1AB1203300D5F30E /* AppDelegate.m */; };
 		17A8BDF11AB1203300D5F30E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 17A8BDF01AB1203300D5F30E /* ViewController.m */; };
@@ -24,6 +26,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		177508271AB1747F00FE0F80 /* NL_Event.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NL_Event.h; path = NL_API/NL_Event.h; sourceTree = "<group>"; };
+		177508281AB1747F00FE0F80 /* NL_Event.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NL_Event.m; path = NL_API/NL_Event.m; sourceTree = "<group>"; };
+		1775082A1AB174E100FE0F80 /* NL_API.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NL_API.h; path = NL_API/NL_API.h; sourceTree = "<group>"; };
+		1775082B1AB1772800FE0F80 /* NL_Account.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NL_Account.h; path = NL_API/NL_Account.h; sourceTree = "<group>"; };
+		1775082C1AB1772800FE0F80 /* NL_Account.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NL_Account.m; path = NL_API/NL_Account.m; sourceTree = "<group>"; };
+		177508311AB1851C00FE0F80 /* NL_Endpoints.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NL_Endpoints.h; path = NL_API/NL_Endpoints.h; sourceTree = "<group>"; };
 		17A8BDE51AB1203300D5F30E /* API Explorer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "API Explorer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		17A8BDE91AB1203300D5F30E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		17A8BDEA1AB1203300D5F30E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -57,6 +65,12 @@
 		177508261AB1737F00FE0F80 /* New Livestream API */ = {
 			isa = PBXGroup;
 			children = (
+				1775082A1AB174E100FE0F80 /* NL_API.h */,
+				177508311AB1851C00FE0F80 /* NL_Endpoints.h */,
+				1775082B1AB1772800FE0F80 /* NL_Account.h */,
+				1775082C1AB1772800FE0F80 /* NL_Account.m */,
+				177508271AB1747F00FE0F80 /* NL_Event.h */,
+				177508281AB1747F00FE0F80 /* NL_Event.m */,
 			);
 			name = "New Livestream API";
 			sourceTree = "<group>";
@@ -217,6 +231,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1775082D1AB1772800FE0F80 /* NL_Account.m in Sources */,
+				177508291AB1747F00FE0F80 /* NL_Event.m in Sources */,
 				17A8BDF11AB1203300D5F30E /* ViewController.m in Sources */,
 				17A8BDEE1AB1203300D5F30E /* AppDelegate.m in Sources */,
 				17A8BDEB1AB1203300D5F30E /* main.m in Sources */,
@@ -323,6 +339,7 @@
 		17A8BE091AB1203300D5F30E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = "API Explorer/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -333,6 +350,7 @@
 		17A8BE0A1AB1203300D5F30E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = "API Explorer/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
