@@ -18,7 +18,7 @@
 
 @interface NL_Account : NSObject
 
-@property (nonatomic) long accountId;
+@property (nonatomic) NSNumber *accountId;
 @property (nonatomic, strong) NSString *full_name;
 @property (nonatomic, strong) NSString *short_name;
 @property (nonatomic, strong) NL_Picture *picture;
@@ -28,6 +28,7 @@
 @property (nonatomic, strong) NSString *gender;
 @property (nonatomic, strong) NSString *type;
 @property (nonatomic, strong) NSDate *dob;
+@property (nonatomic, strong) NSDate *created_at;
 @property (nonatomic) BOOL is_locked;
 @property (nonatomic, strong) NL_Events *upcoming_events;
 @property (nonatomic, strong) NL_Events *past_events;
@@ -57,7 +58,7 @@
 @property (nonatomic, strong) NL_Follow *followers;
 @property (nonatomic, strong) NL_Follow *following;
 
-- (void)populateAccountInBackground:(NSString *)customURL :(void (^)())succeededBlock :(void (^)(NSInteger statusCode, NSError *connectionError))errorBlock;
+- (void)populateAccountInBackground:(NSString *)customURL :(void (^)())succeededBlock :(void (^)(NSInteger statusCode, NSError *connectionError, NSError *jsonError))errorBlock;
 
 - (void)getAccountPictureofSize:(CGFloat)sideLength :(void (^)(UIImage *image))completionBlock;
 
