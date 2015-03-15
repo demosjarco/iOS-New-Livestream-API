@@ -19,7 +19,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
-    [[NL_Account alloc] initWithAccountId:1234123];
+    self.view.backgroundColor = [UIColor whiteColor];
 }
 
 @end

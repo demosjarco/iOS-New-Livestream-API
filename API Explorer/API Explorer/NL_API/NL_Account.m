@@ -13,20 +13,9 @@
 @implementation NL_Account
 
 /*!
- @param accId The ID of the account too look up
+ @param customURL ID or short_name of Livestream account
  */
-
-- (instancetype)initWithAccountId:(long)accId {
-    self = [super init];
-    if (self) {
-        self.accountId = accId;
-    }
-    return self;
-}
-
-/*!
- */
-- (void)populateAccountInBackground :(void (^)())succeededBlock :(void (^)(NSInteger statusCode, NSError *connectionError))errorBlock {
+- (void)populateAccountInBackground:(NSString *)customURL :(void (^)())succeededBlock :(void (^)(NSInteger statusCode, NSError *connectionError))errorBlock {
     [NSURLConnection sendAsynchronousRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:[[APIURL stringByAppendingPathComponent:ACCOUNT_ENDPOINT] stringByAppendingPathComponent:[NSString stringWithFormat:@"%ld", self.accountId]]]] queue:[NSOperationQueue mainQueue] completionHandler:^(NSURLResponse *response, NSData *data, NSError *connectionError) {
         @autoreleasepool {
             NSHTTPURLResponse *correctResponse = (NSHTTPURLResponse *)response;
@@ -48,15 +37,15 @@
  */
 - (void)getAccountPictureofSize:(CGFloat)sideLength :(void (^)(UIImage *image))completionBlock {
     if (sideLength == 0) {
-        [NSURLConnection sendAsynchronousRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:self.picture_url]] queue:[NSOperationQueue mainQueue] completionHandler:^(NSURLResponse *response, NSData *data, NSError *connectionError) {
+        [NSURLConnection sendAsynchronousRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:self.picture.url.absoluteString]] queue:[NSOperationQueue mainQueue] completionHandler:^(NSURLResponse *response, NSData *data, NSError *connectionError) {
             if (!connectionError && data) {
                 completionBlock([UIImage imageWithData:data]);
             }
         }];
     } else if (sideLength > 0) {
         @autoreleasepool {
-            NSString *ext = [self.picture_url pathExtension];
-            NSString *url = [[NSString stringWithFormat:@"%@_%.fx%.f", [self.picture_url stringByDeletingPathExtension], sideLength, sideLength] stringByAppendingPathExtension:ext];
+            NSString *ext = [self.picture.url.absoluteString pathExtension];
+            NSString *url = [[NSString stringWithFormat:@"%@_%.fx%.f", [self.picture.url.absoluteString stringByDeletingPathExtension], sideLength, sideLength] stringByAppendingPathExtension:ext];
             
             [NSURLConnection sendAsynchronousRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:url]] queue:[NSOperationQueue mainQueue] completionHandler:^(NSURLResponse *response, NSData *data, NSError *connectionError) {
                 if (!connectionError && data) {
