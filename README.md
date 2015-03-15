@@ -4,11 +4,13 @@ Objective-C client for retrieving data from "New Livestream" API. This framework
 
 ## Why you should use this
 - Heavily documented
+- Completely asynchronous
 
 ## Requirements
 - ARC
 
 ### Cocoa Frameworks Required
-- TBA (None yet)
+- Foundation
+- UIKit
 
 # Getting Started
