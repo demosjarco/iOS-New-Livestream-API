@@ -10,6 +10,4 @@
 
 @implementation NL_Devices
 
-@prop
-
 @end
