@@ -13,6 +13,8 @@
 #import "NL_Events.h"
 #import "NL_Devices.h"
 #import "NL_PlanInfo.h"
+#import "NL_AdCustomParams.h"
+#import "NL_Follow.h"
 
 @interface NL_Account : NSObject
 
@@ -41,6 +43,19 @@
 @property (nonatomic, strong) NSString *features;
 @property (nonatomic, strong) NSNumber *plan_id;
 @property (nonatomic, strong) NL_PlanInfo *plan_info;
+@property (nonatomic, strong) NSString *features_with_plan;
+@property (nonatomic) BOOL is_searchable;
+@property (nonatomic) BOOL is_public;
+@property (nonatomic, strong) NSString *ad_account_id;
+@property (nonatomic, strong) NSString *ad_provider_id;
+@property (nonatomic, strong) NL_AdCustomParams *ad_custom_params;
+@property (nonatomic) BOOL ad_enabled_for_vod;
+@property (nonatomic) BOOL ad_enabled_for_live;
+@property (nonatomic) BOOL ad_enabled_for_owner;
+@property (nonatomic, strong) NSArray *ad_types;
+@property (nonatomic) BOOL ad_enabled;
+@property (nonatomic, strong) NL_Follow *followers;
+@property (nonatomic, strong) NL_Follow *following;
 
 - (void)populateAccountInBackground:(NSString *)customURL :(void (^)())succeededBlock :(void (^)(NSInteger statusCode, NSError *connectionError))errorBlock;
 

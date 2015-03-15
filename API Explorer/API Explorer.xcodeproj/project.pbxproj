@@ -10,6 +10,8 @@
 		177508291AB1747F00FE0F80 /* NL_Event.m in Sources */ = {isa = PBXBuildFile; fileRef = 177508281AB1747F00FE0F80 /* NL_Event.m */; };
 		1775082D1AB1772800FE0F80 /* NL_Account.m in Sources */ = {isa = PBXBuildFile; fileRef = 1775082C1AB1772800FE0F80 /* NL_Account.m */; };
 		178784A61AB509D600D3F414 /* NL_PlanInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 178784A51AB509D600D3F414 /* NL_PlanInfo.m */; };
+		178784A91AB50C2600D3F414 /* NL_AdCustomParams.m in Sources */ = {isa = PBXBuildFile; fileRef = 178784A81AB50C2600D3F414 /* NL_AdCustomParams.m */; };
+		178784B31AB50EEF00D3F414 /* NL_Follow.m in Sources */ = {isa = PBXBuildFile; fileRef = 178784B21AB50EEF00D3F414 /* NL_Follow.m */; };
 		17A8BDEB1AB1203300D5F30E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 17A8BDEA1AB1203300D5F30E /* main.m */; };
 		17A8BDEE1AB1203300D5F30E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 17A8BDED1AB1203300D5F30E /* AppDelegate.m */; };
 		17A8BDF11AB1203300D5F30E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 17A8BDF01AB1203300D5F30E /* ViewController.m */; };
@@ -38,6 +40,10 @@
 		177508311AB1851C00FE0F80 /* NL_Endpoints.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NL_Endpoints.h; path = NL_API/NL_Endpoints.h; sourceTree = "<group>"; };
 		178784A41AB509D600D3F414 /* NL_PlanInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NL_PlanInfo.h; path = "NL_API/Custom Property Subclasses/NL_PlanInfo.h"; sourceTree = "<group>"; };
 		178784A51AB509D600D3F414 /* NL_PlanInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NL_PlanInfo.m; path = "NL_API/Custom Property Subclasses/NL_PlanInfo.m"; sourceTree = "<group>"; };
+		178784A71AB50C2600D3F414 /* NL_AdCustomParams.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NL_AdCustomParams.h; path = "NL_API/Custom Property Subclasses/NL_AdCustomParams.h"; sourceTree = "<group>"; };
+		178784A81AB50C2600D3F414 /* NL_AdCustomParams.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NL_AdCustomParams.m; path = "NL_API/Custom Property Subclasses/NL_AdCustomParams.m"; sourceTree = "<group>"; };
+		178784B11AB50EEF00D3F414 /* NL_Follow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NL_Follow.h; path = "NL_API/Custom Property Subclasses/NL_Follow.h"; sourceTree = "<group>"; };
+		178784B21AB50EEF00D3F414 /* NL_Follow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NL_Follow.m; path = "NL_API/Custom Property Subclasses/NL_Follow.m"; sourceTree = "<group>"; };
 		17A8BDE51AB1203300D5F30E /* API Explorer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "API Explorer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		17A8BDE91AB1203300D5F30E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		17A8BDEA1AB1203300D5F30E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -156,6 +162,10 @@
 				17AA99A01AB4C37200C20084 /* NL_Devices.m */,
 				178784A41AB509D600D3F414 /* NL_PlanInfo.h */,
 				178784A51AB509D600D3F414 /* NL_PlanInfo.m */,
+				178784A71AB50C2600D3F414 /* NL_AdCustomParams.h */,
+				178784A81AB50C2600D3F414 /* NL_AdCustomParams.m */,
+				178784B11AB50EEF00D3F414 /* NL_Follow.h */,
+				178784B21AB50EEF00D3F414 /* NL_Follow.m */,
 			);
 			name = "Custom Property Subclasses";
 			sourceTree = "<group>";
@@ -261,9 +271,11 @@
 			files = (
 				17BD69461AB4B997003050C1 /* NL_Picture.m in Sources */,
 				1775082D1AB1772800FE0F80 /* NL_Account.m in Sources */,
+				178784B31AB50EEF00D3F414 /* NL_Follow.m in Sources */,
 				177508291AB1747F00FE0F80 /* NL_Event.m in Sources */,
 				17AA99A11AB4C37200C20084 /* NL_Devices.m in Sources */,
 				17A8BDF11AB1203300D5F30E /* ViewController.m in Sources */,
+				178784A91AB50C2600D3F414 /* NL_AdCustomParams.m in Sources */,
 				17A8BDEE1AB1203300D5F30E /* AppDelegate.m in Sources */,
 				17BD694C1AB4BF92003050C1 /* NL_Events.m in Sources */,
 				17A8BDEB1AB1203300D5F30E /* main.m in Sources */,
