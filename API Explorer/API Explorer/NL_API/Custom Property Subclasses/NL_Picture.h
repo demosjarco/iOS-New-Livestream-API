@@ -12,9 +12,9 @@
 @interface NL_Picture : NSObject
 
 @property (nonatomic) CGSize original_size;
-@property (nonatomic, strong) NSURL *url;
-@property (nonatomic, strong) NSURL *thumb_url;
-@property (nonatomic, strong) NSURL *small_url;
-@property (nonatomic, strong) NSURL *medium_url;
+@property (nonatomic, strong) NSString *url;
+@property (nonatomic, strong) NSString *thumb_url;
+@property (nonatomic, strong) NSString *small_url;
+@property (nonatomic, strong) NSString *medium_url;
 
 @end
