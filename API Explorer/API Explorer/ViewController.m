@@ -20,6 +20,16 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     self.view.backgroundColor = [UIColor whiteColor];
+    
+    NL_Account *psbnAccount = [[NL_Account alloc] init];
+    
+    [psbnAccount populateAccountInBackground:@"5145446" :^{
+        // Succeeded
+        NSLog(@"Succeeded");
+    } :^(NSInteger statusCode, NSError *connectionError, NSError *jsonError) {
+        // Fail
+        NSLog(@"Failed %ld | %@ | %@", (long)statusCode, connectionError.localizedDescription, jsonError.localizedDescription);
+    }];
 }
 
 @end
