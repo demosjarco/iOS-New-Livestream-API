@@ -69,6 +69,20 @@
                         
                         self.is_locked = [json[@"is_locked"] boolValue];
                         
+                        self.upcoming_events = [[NL_Events alloc] init];
+                        self.upcoming_events.before = [NSNumber numberWithLong:[[json[@"upcoming_events"] objectForKey:@"before"] longValue]];
+                        self.upcoming_events.after = [NSNumber numberWithLong:[[json[@"upcoming_events"] objectForKey:@"after"] longValue]];
+                        self.upcoming_events.data = [json[@"upcoming_events"] objectForKey:@"data"];
+                        self.upcoming_events.total = [NSNumber numberWithLong:[[json[@"upcoming_events"] objectForKey:@"total"] longValue]];
+                        
+                        self.past_events = [[NL_Events alloc] init];
+                        self.past_events.before = [NSNumber numberWithLong:[[json[@"past_events"] objectForKey:@"before"] longValue]];
+                        self.past_events.after = [NSNumber numberWithLong:[[json[@"past_events"] objectForKey:@"after"] longValue]];
+                        self.past_events.data = [json[@"past_events"] objectForKey:@"data"];
+                        self.past_events.total = [NSNumber numberWithLong:[[json[@"past_events"] objectForKey:@"total"] longValue]];
+                        
+                        self.links = json[@"links"];
+                        
                         succeededBlock();
                     }
                 }

@@ -9,6 +9,8 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
+#import "NL_Event.h"
+
 #import "NL_Picture.h"
 #import "NL_Events.h"
 #import "NL_Devices.h"

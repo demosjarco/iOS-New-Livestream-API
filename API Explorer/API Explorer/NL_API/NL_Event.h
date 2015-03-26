@@ -7,6 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
+
+#import "NL_Picture.h"
 
 @interface NL_Event : NSObject
 
@@ -14,5 +17,11 @@
 @property (nonatomic, strong) NSString *short_name;
 @property (nonatomic, strong) NSString *full_name;
 @property (nonatomic, strong) NSDictionary *owner;
+
+@property (nonatomic, strong) NL_Picture *logo;
+
+- (void)populateEventInBackground:(NSString *)customURLevent fromAccount:(NSString *)customURLaccount :(void (^)())succeededBlock :(void (^)(NSInteger statusCode, NSError *connectionError, NSError *jsonError))errorBlock;
+
+- (void)getEventPosterofSize:(CGSize)posterSize :(void (^)(UIImage *image))completionBlock;
 
 @end
