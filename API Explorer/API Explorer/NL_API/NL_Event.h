@@ -20,6 +20,8 @@
 
 @property (nonatomic, strong) NL_Picture *logo;
 
+@property (nonatomic, strong)
+
 - (void)populateEventInBackground:(NSString *)customURLevent fromAccount:(NSString *)customURLaccount :(void (^)())succeededBlock :(void (^)(NSInteger statusCode, NSError *connectionError, NSError *jsonError))errorBlock;
 
 - (void)getEventPosterofSize:(CGSize)posterSize :(void (^)(UIImage *image))completionBlock;

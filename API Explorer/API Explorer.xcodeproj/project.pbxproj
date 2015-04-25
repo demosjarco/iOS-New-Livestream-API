@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		170C51951AEB3D7800F23E51 /* NL_EventFeed.m in Sources */ = {isa = PBXBuildFile; fileRef = 170C51941AEB3D7800F23E51 /* NL_EventFeed.m */; };
 		177508291AB1747F00FE0F80 /* NL_Event.m in Sources */ = {isa = PBXBuildFile; fileRef = 177508281AB1747F00FE0F80 /* NL_Event.m */; };
 		1775082D1AB1772800FE0F80 /* NL_Account.m in Sources */ = {isa = PBXBuildFile; fileRef = 1775082C1AB1772800FE0F80 /* NL_Account.m */; };
 		178784A61AB509D600D3F414 /* NL_PlanInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 178784A51AB509D600D3F414 /* NL_PlanInfo.m */; };
@@ -32,6 +33,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		170C51931AEB3D7800F23E51 /* NL_EventFeed.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NL_EventFeed.h; path = "NL_API/Custom Property Subclasses/NL_EventFeed.h"; sourceTree = "<group>"; };
+		170C51941AEB3D7800F23E51 /* NL_EventFeed.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NL_EventFeed.m; path = "NL_API/Custom Property Subclasses/NL_EventFeed.m"; sourceTree = "<group>"; };
 		177508271AB1747F00FE0F80 /* NL_Event.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NL_Event.h; path = NL_API/NL_Event.h; sourceTree = "<group>"; };
 		177508281AB1747F00FE0F80 /* NL_Event.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NL_Event.m; path = NL_API/NL_Event.m; sourceTree = "<group>"; };
 		1775082A1AB174E100FE0F80 /* NL_API.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NL_API.h; path = NL_API/NL_API.h; sourceTree = "<group>"; };
@@ -166,6 +169,8 @@
 				178784A81AB50C2600D3F414 /* NL_AdCustomParams.m */,
 				178784B11AB50EEF00D3F414 /* NL_Follow.h */,
 				178784B21AB50EEF00D3F414 /* NL_Follow.m */,
+				170C51931AEB3D7800F23E51 /* NL_EventFeed.h */,
+				170C51941AEB3D7800F23E51 /* NL_EventFeed.m */,
 			);
 			name = "Custom Property Subclasses";
 			sourceTree = "<group>";
@@ -269,6 +274,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				170C51951AEB3D7800F23E51 /* NL_EventFeed.m in Sources */,
 				17BD69461AB4B997003050C1 /* NL_Picture.m in Sources */,
 				1775082D1AB1772800FE0F80 /* NL_Account.m in Sources */,
 				178784B31AB50EEF00D3F414 /* NL_Follow.m in Sources */,
