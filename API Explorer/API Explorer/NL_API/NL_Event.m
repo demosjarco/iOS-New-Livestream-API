@@ -46,6 +46,10 @@
                         self.logo.small_url = [json[@"logo"] objectForKey:@"small_url"];
                         self.logo.medium_url = [json[@"logo"] objectForKey:@"medium_url"];
                         
+                        self.feed = [[NL_EventFeed alloc] init];
+                        self.feed.total = [json[@"feed"] objectForKey:@"total"];
+                        self.feed.data = [json[@"feed"] objectForKey:@"data"];
+                        
                         succeededBlock();
                     }
                 }

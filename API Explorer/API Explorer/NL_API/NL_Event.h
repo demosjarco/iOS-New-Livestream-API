@@ -10,6 +10,7 @@
 #import <UIKit/UIKit.h>
 
 #import "NL_Picture.h"
+#import "NL_EventFeed.h"
 
 @interface NL_Event : NSObject
 
@@ -20,7 +21,7 @@
 
 @property (nonatomic, strong) NL_Picture *logo;
 
-@property (nonatomic, strong)
+@property (nonatomic, strong) NL_EventFeed *feed;
 
 - (void)populateEventInBackground:(NSString *)customURLevent fromAccount:(NSString *)customURLaccount :(void (^)())succeededBlock :(void (^)(NSInteger statusCode, NSError *connectionError, NSError *jsonError))errorBlock;
 
