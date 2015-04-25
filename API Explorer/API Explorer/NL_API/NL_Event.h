@@ -21,10 +21,15 @@
 
 @property (nonatomic, strong) NL_Picture *logo;
 
+@property (nonatomic, strong) NSDate *start_time;
+@property (nonatomic, strong) NSDate *end_time;
+
 @property (nonatomic, strong) NL_EventFeed *feed;
 
-- (void)populateEventInBackground:(NSString *)customURLevent fromAccount:(NSString *)customURLaccount :(void (^)())succeededBlock :(void (^)(NSInteger statusCode, NSError *connectionError, NSError *jsonError))errorBlock;
+@property (nonatomic, strong) NSDictionary *stream_info;
 
+- (void)populateEventInBackground:(NSString *)customURLevent fromAccount:(NSString *)customURLaccount :(void (^)())succeededBlock :(void (^)(NSInteger statusCode, NSError *connectionError, NSError *jsonError))errorBlock;
+- (NSString *)getOptimalVideoURL;
 - (void)getEventPosterofSize:(CGSize)posterSize :(void (^)(UIImage *image))completionBlock;
 
 @end

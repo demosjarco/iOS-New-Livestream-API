@@ -50,12 +50,57 @@
                         self.feed.total = [json[@"feed"] objectForKey:@"total"];
                         self.feed.data = [json[@"feed"] objectForKey:@"data"];
                         
+                        @autoreleasepool {
+                            NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+                            [dateFormatter setDateFormat:@"yyyy-MM-dd'T'HH:mm:ss.SSSz"];
+                            self.start_time = [dateFormatter dateFromString:json[@"start_time"]];
+                            self.end_time = [dateFormatter dateFromString:json[@"end_time"]];
+                        }
+                        
+                        self.stream_info = json[@"stream_info"];
+                        
                         succeededBlock();
                     }
                 }
             }
         }
     }];
+}
+
+- (NSString *)getOptimalVideoURL {
+    if (self.stream_info) {
+        // Live Event
+        @autoreleasepool {
+            NSDictionary *postData = [self.feed.data[0] objectForKey:@"data"];
+            
+            NSString *secureHD = [postData objectForKey:@"secure_progressive_url_hd"];
+            NSString *normalHD = [postData objectForKey:@"progressive_url_hd"];
+            NSString *secureSD = [postData objectForKey:@"secure_progressive_url"];
+            NSString *normalSD = [postData objectForKey:@"progressive_url"];
+            
+            if (secureHD) {
+                return secureHD;
+            } else if (normalHD) {
+                return normalHD;
+            } else if (secureSD) {
+                return secureSD;
+            } else {
+                return normalSD;
+            }
+        }
+    } else {
+        // On Demand Event
+        @autoreleasepool {
+            NSString *secureM3U8 = [self.stream_info objectForKey:@"secure_m3u8_url"];
+            NSString *normalM3U8 = [self.stream_info objectForKey:@"m3u8_url"];
+            
+            if (secureM3U8) {
+                return secureM3U8;
+            } else  {
+                return normalM3U8;
+            }
+        }
+    }
 }
 
 /*!
